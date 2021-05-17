@@ -25,7 +25,7 @@ The last 2 additional files in this root folder are READMEs.
     'images' containing background pictures and glyphicons
     
     'js' folder with 2 files invoked from html:
-        'app.py' (coding)
+        'app.js' (coding)
         'data.js' (data) 
     
 
@@ -41,7 +41,7 @@ The last 2 additional files in this root folder are READMEs.
     'images' containing background pictures and glyphicons
     
     'js' folder with 2 files invoked from html:
-        'app.py' (coding)
+        'app.js' (coding)
         'data.js' (data) 
 
 
