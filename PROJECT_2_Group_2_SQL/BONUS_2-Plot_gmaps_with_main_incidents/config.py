@@ -1,0 +1,1 @@
+gkey = "You need a google API_KEY"

@@ -1,0 +1,236 @@
+* {
+  box-sizing: border-box;
+  font-family: Ubuntu, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* The wrapper contains all of the page's content besides the footer */
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 130px;
+  overflow: auto;
+}
+
+.footer {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.btn-default {
+  margin-left: 15px;
+  /* margin-top: 10px; */
+  margin-top: -20px;
+  margin-bottom: 20px;
+
+  background-color: #04AA6D;
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+  text-align: center;
+}
+
+/* test hovering filter button in red to get good contrast */
+.btn-default:hover {
+  /* text color if needed */
+  /* color: red; */
+  background-color: red;
+}
+.btn-success {
+  margin-left: 15px;
+  margin-top: 10px;
+  /* margin-top: 20px; */
+  margin-bottom: 20px;
+  background-color: navy;
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+  text-align: center;
+}
+
+/* .btn-success:hover {
+  /* text color if needed */
+  /* color: red; */
+  /* background-color: red;
+} */
+
+.panel-heading {
+  font-size: 16px;
+  color: yellow;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+  /* text-align: right; */
+}
+/* CSS to input box  */
+input.form-control {
+  /* margin-left: 15px; */
+  height: 29px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  /* text-align: right; */
+}
+
+/* CSS to form-group  */
+.form-group {
+  /* margin-left: 15px; */
+  /* margin-top: 5px; */
+  margin-bottom: 0px;
+  /* font-size: 13px; */
+  /* text-align: right; */
+}
+
+label {
+  font-size: 15px;
+  color: yellow;
+  font-weight: normal;
+  text-shadow: 2px 2px black;
+}
+
+
+.navbar {
+  padding: 5px;
+  margin: 0;
+}
+
+/* This CSS styles the ufo icon in the navbar */
+.nav-ufo {
+  position: absolute;
+  bottom: 3px;
+  left:10px;
+  width: 35px;
+}
+
+.navbar-brand {
+  position: absolute;
+  bottom: 1px;
+  left:50px;
+  font-weight: normal;
+  text-shadow: 2px 2px black;
+}
+
+/* CSS style for main title h1  */
+.hero h1{
+  margin-top: 100px;
+  font-size: 60px;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+  color:yellow;
+  /* animation: title 1.0s forwards linear; */
+  animation: smaller-title 1.2s forwards linear;
+}
+/* CSS style for subtitle h2  */
+.hero h2{
+  font-size: 40px;
+  font-weight: normal;
+  text-shadow: 3px 3px black;
+  /* text-align: right; */
+  color:white;
+}
+
+.navbar-brand:hover {
+  color: red ;
+  }
+  
+
+/* Adding styles to the aside and filter form */
+.ufo-form {
+  margin-top: 50px;
+}
+
+.filters .panel-body {
+  padding: 0;
+}
+
+.filters {
+  margin-top: 0px;
+
+}
+
+select {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  outline: none;
+}
+/* table header stype in black background with white fonts  */
+#table-area th {
+  text-align: left;
+  overflow: auto;
+  /* position: sticky;  */
+  top: 0;
+  background-color: black;
+  color:white;
+  font-size: 16px;
+  line-height: 20px;
+}
+/* table row strips color */
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: rgba(247, 235, 235, 0.933);
+ }
+
+/* table body text in black with white cells other than stripped */
+#table-area tbody {
+  text-align: left;
+  top: 0;
+  background-color: white;
+  color:black;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.loader {
+  margin-top: 50px;
+}
+/* separation of block and table from image container */
+.margin-top-block-filter-button-table {
+  margin-top: 40px;
+}
+
+/* The styles for the parallax */
+.hero {
+  /* height of main picture background and behaviour */
+  height: 400px;
+  padding: 20px;
+  margin: 0;
+  /* background: black; */
+  background: black;
+  /* new background image */
+  background-image: url("../images/ufo7.1.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat; 
+  background-size: contain; 
+}
+
+/* keyframe animations which will be used to animate the title */
+
+@keyframes title {from {opacity: 0;}
+  to {font-size: 7.5rem; opacity: 1; }}
+
+@keyframes smaller-title {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    font-size: 8.5rem;
+    opacity: 1;
+  }
+}
+
+@keyframes subtitle {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

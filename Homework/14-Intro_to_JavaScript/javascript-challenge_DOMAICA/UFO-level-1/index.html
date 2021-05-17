@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>UFO Finder-DOMAICA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Call to bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <!-- invoke and locate folder for Cascading Style Sheets -->
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+           <!-- yellow ufo icon  in navbar-->
+          <img class="nav-ufo" src="static/images/ufoicony2.png">
+          <!-- Refresh page with link to index.html when pressing title text -->
+          <a class="navbar-brand" href="index.html" title="Refresh page">UFO Sightings-DOMAICA</a>
+        </div>
+      </div>
+    </nav>
+    <div class="hero text-center">
+      <!-- h1 size centered -->
+      <h1>UFO Sightings</h1>
+      <!-- h2 below -->
+      <h2>The Truth is Out There</h2>
+    </div>
+    <!-- Panel for filtering -->
+    <div class="container">
+      <!-- class invoked in css to leave a margin between photo and blocks -->
+      <div class="row margin-top-block-filter-button-table">
+        <!-- size of 2/12 of a row with bootstrap -->
+        <div class="col-md-2">
+          <!-- sidebar in the document for filtering content-->
+          <aside class="filters">
+            <div class="panel panel-default">
+              <div class="panel-heading">Filter Search</div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                      <a class="filter list-group-item">
+                        <label for="date">Enter a Date in the box below between 1/1/2010 & 1/13/2010:</label>
+                        <!-- input field. Placeholder suggest an input date -->
+                        <input class="form-control" id="datetime" type="text" placeholder="1/11/2010">
+                      </a>
+                  </div>
+                  <!-- button to click for submitting action. Title for button -->
+                  <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                </form>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <!-- size of 10/12 of a row with bootstrap -->        
+        <div class="col-md-10">
+          <div id="table-area" class="">
+            <!-- stripped table rows to better contrast  -->
+            <table id="ufo-table" class="table table-striped">
+              <thead>
+                <!-- table column titles -->
+                <tr>
+                  <th class="table-head">DATE</th>
+                  <th class="table-head">CITY</th>
+                  <th class="table-head">STATE</th>
+                  <th class="table-head">COUNTRY</th>
+                  <th class="table-head">SHAPE</th>
+                  <th class="table-head">DURATION</th>
+                  <th class="table-head">COMMENTS</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <span class="bottom">UFO Sightings</span>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <!-- declare additional used javascript files for data and coding -->
+  <script src="static/js/data.js"></script>
+  <script src="static/js/app.js"></script>
+</body>
+
+</html>

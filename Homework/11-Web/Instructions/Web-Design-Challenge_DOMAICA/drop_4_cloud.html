@@ -1,0 +1,143 @@
+<!-- CLOUD PAGE -->
+<!-- Declarations and setup language -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <!-- Link to Bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- CSS Stylesheet declaration. Link to file for Cascading Style Sheet-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <!-- Tag title for internet browser tab -->
+    <title>Latitude vs Cloudiness DOMAICA</title>
+</head>
+<body>
+       <!-- Bootstrap JavaScript -->
+        <!-- como en 06 lorem ipsum -->
+        <!-- needed scripts to make dropdown work -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+            crossorigin="anonymous"></script>
+   
+     <!-- 1st Row with buttons and dropdown -->
+     <div class="topbar">
+        <!-- decided to fix at top to have navigation when scrolling -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+   <!-- Exactly like in bootstrap components lesson. Click button goes back to landing page-->
+            <a class="navbar-brand" style="background-color: blue;" href="1_index.html"> Go to Home Page</a>
+            <!-- Dropdown menu -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle topbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <!-- dropdown is setup as a unstructured list-->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <!-- title of dropdown. I prefer it Bold-->
+                            <strong>PLOTS</strong>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <!-- Dropdown links to different html pages -->
+                            <a class="dropdown-item" href="drop_1_wind.html">Wind speed</a>
+                            <a class="dropdown-item" href="drop_2_temperature.html">Temperature</a>
+                            <a class="dropdown-item" href="drop_3_humidity.html">Humidity</a>
+                            <a class="dropdown-item" href="drop_4_cloud.html">Cloudiness</a>
+                        </div>
+                    </li>
+                    <!-- rest of navigation items, links to comparison and data-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="6_comparisons.html"><strong>COMPARISONS</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="7_data.html"><strong>DATA</strong></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- After topbar, begin with bootstrap containers for content and grids -->
+    <div class="container">
+        <div class="row">
+            <!-- After different tests, I like proportion of 7 + 5 = 12 for rows.-->
+            <!-- this proportion is used in linked pages,no in landing one-->
+            <div class="col-lg-7 col-md-12">
+                <!-- Main analysis box at left side-->
+                <div class="box" style="padding-bottom: 30px;">
+                    <div class="row justify-content-center">
+                        <h3 class="titlepage">Cities latitude vs Cloudiness</h3>
+                    </div>
+                    <hr>
+                    <img src="Resources/assets/images/Fig3.png" class="full" alt="Cloud cover % plot">
+                    <p>With the sample data we can conclude that there is no observable correlation between 
+                        latitude or position with respect to the equator and cloud cover.
+                        <br></br>
+                        The data obtained indicate that in any part of the globe, 
+                        there is a heterogeneous and diverse cloudiness.
+                        <br></br>
+                        The data are completely heterogeneous and diverse.</p>
+                </div>
+            </div>
+           <!-- Rest of row has a 5 size because 1st box was 8 size for a total of 12 per row-->
+           <div class="col-lg-5 col-md-12">
+            <!-- Box for tiles at right side-->
+                 <div class="box">
+                    <div class="row justify-content-center">
+                    <h3 class="title">VISUALIZATIONS</h3>
+                    </div>
+                    <hr>
+                    <div class="container">
+                        <div class="row" style="padding-bottom: 50px;">
+                            <div class="col-6">
+                                <div class="row justify-content-center">
+                                    <h5 class="card-title">Wind Speed</h5>
+                                </div>
+                                <a href="drop_1_wind.html">
+                                <img class="panel" src="Resources/assets/images/Fig4.png" alt="Wind Speed Plot">
+                                </a>
+                            
+                            </div>
+                            <div class="col-6">
+                                <div class="row justify-content-center">
+                                    <h5 class="card-title">Max. Temperature</h5>
+                                </div>
+                                <a href="drop_2_temperature.html">
+                                <img class="panel" src="Resources/assets/images/Fig1.png" alt="Max Temperature Plot">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row" style="padding-bottom: 30px;">
+                            <div class="col-6">
+                                <div class="row justify-content-center">
+                                    <h5 class="card-title">Humidity</h5>
+                                </div>
+                                <a href="drop_3_humidity.html">
+                                <img class="panel" src="Resources/assets/images/Fig2.png" alt="Humidity Plot">
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <div class="row justify-content-center">
+                                    <h5 class="card-title">Cloudiness</h5>
+                                </div>
+                                <a href="drop_4_cloud.html">
+                                    <img class="panel" src="Resources/assets/images/Fig3.png" alt="Cloud cover % plot">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

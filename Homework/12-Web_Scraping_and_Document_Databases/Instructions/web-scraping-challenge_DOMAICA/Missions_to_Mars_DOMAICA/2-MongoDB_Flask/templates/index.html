@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+  
+    img{
+  width:80% ;
+  height:80% ;
+}
+
+table {
+  border: 2px solid black;
+  /* font-size: 30px;
+  line-height: 35px; */
+  padding: 5px;
+  border-collapse: separate     
+}
+
+td {
+  border: 2px solid black;
+  font-size: 18px;
+  line-height: 22px;
+  /* padding: 30px;     */
+
+
+}
+
+th {
+  border: 3px solid black;
+  font-size: 20px;
+  line-height: 25px;
+  /* padding-right: 10px;   */
+
+} 
+.dataframe{
+  margin-left: 3px;     
+}
+
+
+  </style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars-DOMAICA</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <!-- CSS Stylesheet declaration. Link to file for Cascading Style Sheet-->
+   <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+</head>
+
+<body>
+  
+  <div class="jumbotron text-center">
+    <h1>Mission to Mars</h1>
+    <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+  </div>
+    <div class="container-fluid news no-padding" id="scraped-data">
+      <div class="row no-gutter">
+        <div class="card-body">
+          <h2 class="card-title" id="font" style='color:blue'><strong>Latest Mars News</strong></h2>
+          <h3 class="card-subtitle mb-2 " id="font">{{ mars.news_title }}</h3>
+          <h4 class="card-text">{{ mars.paragraph }}</h4>
+        </div>
+      </div>
+      </div>
+      <div class="row no-gutter img-table">
+        <div class="col-md-6" >
+          <div class="card">
+            <div class="card-body" id="img-table">
+              <br>
+              <h2 class="card-title" style='color:blue'><strong>Featured Mars Image</strong></h2>
+              <h3 class="card-text" id="dark-font">{{ mars.featured_image_title }}</h3>
+              <img class="card-img-bottom" src="{{ mars.featured_image }}" alt="Featured Mars Image">
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-md-5" > -->
+        
+         <div class="col-md-5">
+                <br>
+                <h2 style='color:blue'><strong>Mars Facts</strong></h2>
+                <br>
+                
+                 <!-- Table with required characteristics-->
+                  <!-- <div class="table-responsive" style="overflow-x:auto; max-width: auto;"> -->
+                    <div class="table-responsive">
+                     <!-- Stripped rows to better contrast of contents-->
+                     <table class="table table-striped">
+                       <table class="dataframe">
+                        <thead>
+                          <!-- <tr style="text-align: right;"> -->
+                            <th>Mars - Earth Comparison</th>
+                            <th>Mars </th>
+                            <th>Earth</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Diameter:</td>
+                            <td>6,779 km</td>
+                            <td>12,742 km</td>
+                          </tr>
+                          <tr>
+                            <td>Mass:</td>
+                            <td>6.39 × 10^23 kg</td>
+                            <td>5.97 × 10^24 kg</td>
+                          </tr>
+                          <tr>
+                            <td>Moons:</td>
+                            <td>2</td>
+                            <td>1</td>
+                          </tr>
+                          <tr>
+                            <td>Distance from Sun:</td>
+                            <td>227,943,824 km</td>
+                            <td>149,598,262 km</td>
+                          </tr>
+                          <tr>
+                            <td>Length of Year:</td>
+                            <td>687 Earth days</td>
+                            <td>365.24 days</td>
+                          </tr>
+                          <tr>
+                            <td>Temperature:</td>
+                            <td>-87 to -5 °C</td>
+                            <td>-88 to 58°C</td>
+                          </tr>
+                        </tbody>
+                      </table>           
+        </div>
+          </div>
+        
+        </div>
+
+      
+        <!-- <div class ="row" id="mars-hemispheres"> -->
+        <div class ="row" id="img">
+          <div class = "col-md-12">
+              
+              <h2 style='color:blue'><center><strong>Mars Hemispheres</strong></center></h2>
+              {% for image in mars.images %}
+                  <div class = "col-md-3">
+                      <div class = "thumbnail">
+                          <img src = "{{image}}">
+
+                      </div>
+                  </div>
+              {% endfor %}
+
+              {% for title in mars.titles %}
+                <div class = "col-md-3">
+                  <h3><strong>{{ title }}</strong> </h3></li>
+                </div>
+              {% endfor %}
+          </div>
+          
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+
+ 
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
+
+    </body>
+</html>

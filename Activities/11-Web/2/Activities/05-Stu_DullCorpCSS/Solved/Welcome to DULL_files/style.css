@@ -1,0 +1,36 @@
+h1 {
+  text-align: center;
+  background-color: grey;
+  color: yellow;
+}
+
+h2 {
+  color: deeppink;
+margin: 25px;
+
+}
+
+h3 {
+  color: orange;
+margin: 25px;
+}
+
+img {
+  box-shadow: 10px 10px 5px black;
+margin: 25px;
+}
+
+section {
+  background-color: #000;
+}
+
+p {
+  font-size: 15px;
+  color: white;
+margin: 25px;
+}
+
+ul {
+  border-style: solid;
+  color: gray;
+}
