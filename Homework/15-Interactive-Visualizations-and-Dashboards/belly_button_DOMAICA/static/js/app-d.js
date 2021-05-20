@@ -59,6 +59,8 @@ function init() {
         values: sample_values,
         labels: otu_labels,
       };
+    
+
       // calling all 4 functions to plot and fill data
       render_data_table(person_final_data);
       bar_chart(results);
@@ -112,7 +114,7 @@ function init() {
   // function to plot BAR
   //####################################################
   function bar_chart(results) {
-
+    
     // Slice to display the top 10 OTUs found in that individual.
     var otu_ids = results.idStr.slice(0, 10);
     var sample_values = results.values.slice(0, 10);

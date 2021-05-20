@@ -117,6 +117,7 @@ function init() {
     var otu_ids = results.idStr.slice(0, 10);
     var sample_values = results.values.slice(0, 10);
     var otu_labels = results.labels.slice(0, 10);
+  
 
     // list for colors separated 10 colors for maximum 10 OTUs
     var colors = ["red", "orange", "yellow","lightgreen","yellowgreen","green",
