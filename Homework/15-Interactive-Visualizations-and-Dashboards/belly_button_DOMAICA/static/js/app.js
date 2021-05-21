@@ -82,24 +82,17 @@ function init() {
       Object.entries(person_final_data).forEach(function ([key, value]) {
         var row = document.createElement("tr");
 
-    // splitting row in 2 entries, one for key data or title row and another for values
-        var key_cell = document.createElement("td");
-        // bold font for data titles in row
-        key_cell.style.fontWeight = "bold";
-        key_cell.style.fontSize = "16px";
-        // append text for key row data
+      // variable to get final text line 
+        var text_cell = document.createElement("td");
+        // append texts for row data
         var key_text = document.createTextNode(`${key}:`);
-        key_cell.append(key_text);
-        row.append(key_cell);
-    
-        var value_cell = document.createElement("td");
-        // padding to slightly separate from row data title
-        value_cell.style.padding = "5px";
-        value_cell.style.fontSize = "16px";
         var value_text = document.createTextNode(`${value}`);
-        value_cell.append(value_text);
-        row.append(value_cell);
-    
+        // found in documentation interesting way of inserting 2 spaces between in text to make it inteligible
+        //https://stackoverflow.com/questions/10951340/create-a-blank-html-space-on-the-fly-javascript
+        var blank = document.createTextNode( '\u00A0\u00A0' ) 
+        // append values to cell and a double space in between
+        text_cell.append(key_text, blank, value_text);  
+        row.append(text_cell);
         // send to html body table
         html_table_body.append(row);
       });
