@@ -244,7 +244,7 @@ function init() {
       {
         value: wfreq,
         title: { text: "<b>Belly Button Washing Frequency</b> <br> Scrubs per Week",
-        font: {size: 20}, 
+        font: {size: 18}, 
       
       },
         type: "indicator",
@@ -281,7 +281,7 @@ function init() {
     ];
   // gauge size
     var layout = { 
-      width: 500, 
+      width: 450, 
       height: 400,
       font: {size: 15},
       margin: {
@@ -304,7 +304,7 @@ function init() {
   
   // Function to get new data after change of subject after dropdown change
   function new_person_sample() {
-    let selected_id = d3.select("#selDataset").node().value;
+    var selected_id = d3.select("#selDataset").node().value;
     // clean html table to refill
     d3.selectAll("#table").remove();
     // extract data with new selected person_id

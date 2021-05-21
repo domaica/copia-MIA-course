@@ -1,85 +1,50 @@
-# Plot.ly Homework - Belly Button Biodiversity
+# javascript-challenge_DOMAICA
 
-![Bacteria by filterforge.com](Images/bacteria.jpg)
+## Main folder for solution is called: 'javascript-challenge_DOMAICA'
 
-In this assignment, you will build an interactive dashboard to explore the [Belly Button Biodiversity dataset](http://robdunnlab.com/projects/belly-button-biodiversity/), which catalogs the microbes that colonize human navels.
+Inside that folder, we can find solution files which are contained in 2 subfolders in proper sequence:
 
-The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in more than 70% of people, while the rest were relatively rare.
+- UFO-level-1
+- UFO-level-2-BONUS
 
-## Step 1: Plotly
+The last 2 additional files in this root folder are READMEs.
 
-1. Use the D3 library to read in `samples.json`.
+- README.md -> Markdown with project explanation.
+- README.pptx -> Powerpoint containing screenshots, explaining process and main images of the outcomes, of webpages and additional details.
 
-2. Create a horizontal bar chart with a dropdown menu to display the top 10 OTUs found in that individual.
 
-* Use `sample_values` as the values for the bar chart.
 
-* Use `otu_ids` as the labels for the bar chart.
+### - Subfolder UFO-level-1 contains:
 
-* Use `otu_labels` as the hovertext for the chart.
+- 'index.html' webpage for solution of filtering by date.
 
-  ![bar Chart](Images/hw01.png)
+- 'static' subfolder with another 3 subfolders:
 
-3. Create a bubble chart that displays each sample.
+    'css' containing the 'style.css' file for cascading style sheet formatting
 
-* Use `otu_ids` for the x values.
+    'images' containing background pictures and glyphicons
+    
+    'js' folder with 2 files invoked from html:
+        'app.js' (coding)
+        'data.js' (data) 
+    
 
-* Use `sample_values` for the y values.
 
-* Use `sample_values` for the marker size.
+### - Subfolder UFO-level-2-BONUS: 
 
-* Use `otu_ids` for the marker colors.
+- 'index.html' webpage for solution of filtering by one or multiple criteria.
 
-* Use `otu_labels` for the text values.
+- 'static' subfolder with another 3 subfolders:
 
-![Bubble Chart](Images/bubble_chart.png)
+    'css' containing the 'style.css' file for cascading style sheet formatting
 
-4. Display the sample metadata, i.e., an individual's demographic information.
+    'images' containing background pictures and glyphicons
+    
+    'js' folder with 2 files invoked from html:
+        'app.js' (coding)
+        'data.js' (data) 
 
-5. Display each key-value pair from the metadata JSON object somewhere on the page.
 
-![hw](Images/hw03.png)
 
-6. Update all of the plots any time that a new sample is selected.
 
-Additionally, you are welcome to create any layout that you would like for your dashboard. An example dashboard is shown below:
 
-![hw](Images/hw02.png)
-
-## Advanced Challenge Assignment (Optional)
-
-The following task is advanced and therefore optional.
-
-* Adapt the Gauge Chart from <https://plot.ly/javascript/gauge-charts/> to plot the weekly washing frequency of the individual.
-
-* You will need to modify the example gauge code to account for values ranging from 0 through 9.
-
-* Update the chart whenever a new sample is selected.
-
-![Weekly Washing Frequency Gauge](Images/gauge.png)
-
-## Deployment
-
-* Deploy your app to a free static page hosting service, such as GitHub Pages. Submit the links to your deployment and your GitHub repo.
-
-* Ensure your repository has regular commits (i.e. 20+ commits) and a thorough README.md file
-
-## Hints
-
-* Use `console.log` inside of your JavaScript code to see what your data looks like at each step.
-
-* Refer to the [Plotly.js documentation](https://plot.ly/javascript/) when building the plots.
-
-## Rubric
-
-[Unit 15 Rubric - Plot.ly Homework - Belly Button Biodiversity](https://docs.google.com/document/d/14ZKfNF4ws6CxlUsrhI81Q3YD06h0QQ1PbZa6BMnr7w4/edit?usp=sharing)
-
-- - -
-
-## References
-
-Hulcr, J. et al.(2012) _A Jungle in There: Bacteria in Belly Buttons are Highly Diverse, but Predictable_. Retrieved from: [http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/](http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/)
-
-- - -
-
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
