@@ -283,14 +283,14 @@ function init() {
   // gauge size
     var layout = { 
       width: 450, 
-      height: 400,
+      height: 500,
       font: {size: 15},
       margin: {
         l: 100,
-        r: 0,
+        r: 20,
         b: 0,
         t: 10,
-        pad: 20,
+        pad: 10,
       }, 
     };
     // Plot horizontal gauge chart
