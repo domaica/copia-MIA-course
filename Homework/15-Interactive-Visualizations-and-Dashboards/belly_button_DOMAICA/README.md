@@ -1,48 +1,29 @@
-# javascript-challenge_DOMAICA
+# belly_button_DOMAICA
 
-## Main folder for solution is called: 'javascript-challenge_DOMAICA'
+## Main folder for solution is called: 'belly_button_DOMAICA'
 
-Inside that folder, we can find solution files which are contained in 2 subfolders in proper sequence:
+Inside that root folder, we can find 3 files:
 
-- UFO-level-1
-- UFO-level-2-BONUS
+- 'index.html' with code for the webpage for the project.
+- 'README.md' -> Markdown with project explanation.
+- 'README.pptx' -> Powerpoint containing screenshots, explaining process and main images of the outcomes, of webpages and additional details.
 
-The last 2 additional files in this root folder are READMEs.
+And 2 additional folders in proper sequence:
 
-- README.md -> Markdown with project explanation.
-- README.pptx -> Powerpoint containing screenshots, explaining process and main images of the outcomes, of webpages and additional details.
+- 'images'
+- 'static'
 
+### - Subfolder 'static' contains:
 
-
-### - Subfolder UFO-level-1 contains:
-
-- 'index.html' webpage for solution of filtering by date.
-
-- 'static' subfolder with another 3 subfolders:
-
-    'css' containing the 'style.css' file for cascading style sheet formatting
-
-    'images' containing background pictures and glyphicons
+- 'static/data' subfolder which contains a 'samples.json' (data) file with the sample statistical infos collected for the project that will be used to analyze and plot visualizations.
     
-    'js' folder with 2 files invoked from html:
-        'app.js' (coding)
-        'data.js' (data) 
-    
+- 'static/js' subfolder with and 'app.js' (coding) file invoked from html containing the javascript code.
+  
 
 
-### - Subfolder UFO-level-2-BONUS: 
+### - Subfolder 'images': 
 
-- 'index.html' webpage for solution of filtering by one or multiple criteria.
-
-- 'static' subfolder with another 3 subfolders:
-
-    'css' containing the 'style.css' file for cascading style sheet formatting
-
-    'images' containing background pictures and glyphicons
-    
-    'js' folder with 2 files invoked from html:
-        'app.js' (coding)
-        'data.js' (data) 
+-it is not very relevant. Contains initial pictures provided for instructions + color palettes with hexadecimal coding to be used as reference to choose colors for display visualizations.
 
 
 

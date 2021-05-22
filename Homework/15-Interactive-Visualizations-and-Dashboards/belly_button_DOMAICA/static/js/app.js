@@ -195,8 +195,9 @@ function init() {
       marker: {
         // weight of markers according size 
         size: sample_values,
-        // color fading according to bubble weights and ids
+        // color fading according to bubble weights or ids
         color: otu_ids,
+        // color: sample_values,
       },
     };
   
