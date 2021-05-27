@@ -14,12 +14,11 @@ And 1 additional folder:
 
 ### - Subfolder 'static' contains:
 
-- 'static/data' subfolder which contains a 'samples.json' (data) file with the sample statistical infos collected for the project that will be used to analyze and plot visualizations.
+- 'static/data' subfolder which contains a 'data.csv' (data) file with the sample statistical infos collected for the project that will be used to analyze and plot visualizations.
     
 - 'static/js' subfolder with and 'app.js' (coding) file invoked from html containing the javascript code.
   
-
-
+- 'static/css' subfolder which contains 2 files:  'd3Style.css'  and 'style.css'. Both files are .css Cascading Style Sheets used to adapt the presentation of webpage by modifying and enhancing colors, layouts, margin, fonts, etc.
 
 
 ### - Cross-origin resource sharing (CORS)
