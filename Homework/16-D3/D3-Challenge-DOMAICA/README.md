@@ -1,6 +1,6 @@
-# belly_button_DOMAICA
+# D3-Challenge-DOMAICA
 
-## Main folder for solution is called: 'belly_button_DOMAICA'
+## Main folder for solution is called: 'D3-Challenge-DOMAICA'
 
 Inside that root folder, we can find 3 files:
 
@@ -8,9 +8,8 @@ Inside that root folder, we can find 3 files:
 - 'README.md' -> Markdown with project explanation.
 - 'README.pptx' -> Powerpoint containing screenshots, explaining process and main images of the outcomes, of webpages and additional details.
 
-And 2 additional folders in proper sequence:
+And 1 additional folder:
 
-- 'images'
 - 'static'
 
 ### - Subfolder 'static' contains:
@@ -21,9 +20,6 @@ And 2 additional folders in proper sequence:
   
 
 
-### - Subfolder 'images': 
-
-It is not very relevant. It contains initial pictures provided for instructions + color palettes with hexadecimal coding to be used as reference to choose colors for display visualizations.
 
 
 ### - Cross-origin resource sharing (CORS)
