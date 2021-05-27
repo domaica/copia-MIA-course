@@ -1,6 +1,6 @@
 // // Define SVG attributes
 var width = 1000;
-var height = 500;
+var height = 550;
 // 
 var margin = 15;
 var labelArea = 90;
