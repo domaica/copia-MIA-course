@@ -48,6 +48,7 @@ function makeResponsive() {
       data.date = dateParser(data.date);
       data.medals = +data.medals;
     });
+    // console.log(medalData);
 
     // create scales
     var xTimeScale = d3.scaleTime()
@@ -98,13 +99,23 @@ function makeResponsive() {
     var dateFormatter = d3.timeFormat("%d-%b");
 
     // Step 1: Append tooltip div
+    var toolTip = d3.select("body").append("div")
+    .attr("class", "tooltip");
 
 
     // Step 2: Create "mouseover" event listener to display tooltip
-
+    circlesGroup.on("mouseover", function(d, i) {
+      toolTip.style("display", "block");
+      toolTip.html(`Medals obtained: <strong>${d.medals}</strong>`)
+        .style("left", d3.event.pageX + "px")
+        .style("top", d3.event.pageY + "px");
+    })
 
     // Step 3: Create "mouseout" event listener to hide tooltip
-
+    // Step 3: Add an onmouseout event to make the tooltip invisible
+    .on("mouseout", function() {
+      toolTip.style("display", "none");
+    });
 
   }).catch(function(error) {
     console.log(error);

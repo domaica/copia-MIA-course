@@ -105,14 +105,15 @@ function makeResponsive() {
           return (`<strong>${dateFormatter(d.date)}<strong><hr>${d.medals}
           medal(s) won`);
         });
-
+    // Método diferente con una función tip que tiene D3
       // Step 2: Create the tooltip in chartGroup.
       chartGroup.call(toolTip);
-
+    // Método diferente con una función tip que tiene D3
       // Step 3: Create "mouseover" event listener to display tooltip
       circlesGroup.on("mouseover", function(d) {
         toolTip.show(d, this);
       })
+    // Método diferente con una función tip que tiene D3
       // Step 4: Create "mouseout" event listener to hide tooltip
         .on("mouseout", function(d) {
           toolTip.hide(d);

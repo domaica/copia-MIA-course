@@ -57,5 +57,17 @@ var circlesGroup = chartGroup.selectAll("circle")
   .attr("fill", "red");
 
 // YOUR CODE HERE
-
+// Create the event listeners with transitions
+circlesGroup.on("mouseover", function() {
+  d3.select(this)
+            .transition()
+            .duration(500)
+            .attr("fill", "green");
+})
+    .on("mouseout", function() {
+      d3.select(this)
+            .transition()
+            .duration(500)
+            .attr("fill", "red");
+    });
 

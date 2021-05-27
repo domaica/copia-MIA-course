@@ -7,7 +7,8 @@ d3.csv("./hours-of-tv-watched.csv").then(function(tvData) {
   var names = tvData.map(data => data.name);
   console.log("names", names);
 
-  // Cast each hours value in tvData as a number using the unary + operator
+  // Cast each hours value in tvData as a
+  // number using the unary + operator
   tvData.forEach(function(data) {
     data.hours = +data.hours;
     console.log("Name:", data.name);

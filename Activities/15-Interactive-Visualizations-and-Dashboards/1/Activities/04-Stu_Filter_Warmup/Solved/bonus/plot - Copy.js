@@ -73,7 +73,7 @@ var data2 = [trace2];
 
 // Define our plot layout
 var layout = {
-  title: "Cities that added more than 15,000 people in 2017",
+  title: "% DE POBLACION QUE CRECIO EN ESTAS CIUDADES SOBRE EL TOTAL",
   xaxis: { title: "City" },
   yaxis: { title: "Population Growth Rate (%)"}
 };

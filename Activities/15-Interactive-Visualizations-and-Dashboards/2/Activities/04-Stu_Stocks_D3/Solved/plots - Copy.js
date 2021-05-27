@@ -1,5 +1,5 @@
 // var apiKey = "YOUR KEY HERE";
-var apiKey = "   ";
+var apiKey = "yVAps94148M2ZiXfJyUF";
 
 /* global Plotly */
 // ENMEDIO DE AQUI PONES EL DATASET_CODE QUE ES EL TICKER
@@ -41,7 +41,8 @@ function buildPlot() {
 
     var trace1 = {
       type: "scatter",
-      mode: "lines",
+      // mode: "lines",
+      mode: "lines+markers",
       name: name,
       x: dates,
       y: closingPrices,
@@ -57,13 +58,14 @@ function buildPlot() {
       title: `${stock} closing prices`,
       xaxis: {
         // EXPERIMENTO
-        range: [startDate, '2018-03-27'],
-        // range: [startDate, endDate],
-        // autorange: true,
+        // range: [startDate, '2018-03-27'],
+        range: [startDate, endDate],
+        autorange: true,
         type: "date"
       },
       yaxis: {
-        autorange: true,
+        // autorange: true,
+        rangemode: 'tozero',
         type: "linear"
       }
     };

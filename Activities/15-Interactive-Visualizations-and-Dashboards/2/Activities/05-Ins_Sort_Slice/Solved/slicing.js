@@ -2,6 +2,7 @@
 var names = ["Jane", "John", "Jimbo", "Jedediah"];
 
 // Slice the first two names. 0,2 give me 0 and 1 jane y john
+// 
 var left = names.slice(0, 2);
 // Returns elements at index position 0 and 1, but not 2.
 console.log(left);

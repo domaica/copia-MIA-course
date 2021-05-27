@@ -20,7 +20,7 @@ function handleSubmit() {
   var stock = d3.select("#stockInput").node().value;
   console.log(stock);
 
-  // clear the input value
+  // clear the input value CLEAR INPUT
   d3.select("#stockInput").node().value = "";
 
   // Build the plot with the new stock
@@ -46,7 +46,7 @@ function buildPlot(stock) {
     // console.log(dates);
     var closingPrices = data.dataset.data.map(row => row[4]);
     // console.log(closingPrices);
-
+//##################################################################
     var trace1 = {
       type: "scatter",
       // mode: "lines",
@@ -60,6 +60,7 @@ function buildPlot(stock) {
     };
 
     var data = [trace1];
+    //######################################
 
     var layout = {
       title: `${stock} closing prices`,
@@ -73,7 +74,7 @@ function buildPlot(stock) {
         type: "linear"
       }
     };
-
+//################################################################
     Plotly.newPlot("plot", data, layout);
 
   });

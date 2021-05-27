@@ -17,19 +17,21 @@ var filteredCities = top15Cities.filter(filterCities);
 console.log(filteredCities);
 
 // 3. Use the map method with the arrow function to return all the filtered cities.
+// SOLO NOMBRE DE LA CIUDAD
 var cities = filteredCities.map(city => city.City);
 
 //  Check your filtered cities
-console.log(cities);
+console.log('NOMBRE --> City:', cities);
 
 // 4. Use the map method with the arrow function to return all the filtered cities population.
 var population = filteredCities.map(city => city.population);
 
 //  Check the populations of your filtered cities
-console.log(population);
+console.log('population x city:',population);
 
 // 4. Use the map method with the arrow function to return all the filtered cities population.
 var delta_population = filteredCities.map(city => city.Increase_from_2016);
+console.log('delta : ', population);
 
 // 5. Create your trace.
 var trace = {

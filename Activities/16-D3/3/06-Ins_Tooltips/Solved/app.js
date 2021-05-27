@@ -63,7 +63,8 @@ function makeResponsive() {
     .append("circle")
     .attr("cx", (d, i) => xScale(i))
     .attr("cy", d => yScale(d))
-    .attr("r", "5")
+    // circulo rojo y tamaño
+    .attr("r", "10")
     .attr("fill", "red");
 
   // Step 1: Append a div to the body to create tooltips, assign it a class

@@ -53,7 +53,8 @@ function buildPlot(stock) {
     var trace1 = {
       type: "scatter",
       mode: "lines",
-      name: name,
+      // name: name,
+      name: stock,
       x: dates,
       y: closingPrices,
       line: {

@@ -11,7 +11,7 @@ function makeResponsive() {
   if (!svgArea.empty()) {
     svgArea.remove();
   }
-
+// pull height and width of window cuando la cambiamos dinamicamente
     // svg params
   var svgHeight = window.innerHeight;
   var svgWidth = window.innerWidth;
@@ -51,6 +51,7 @@ function makeResponsive() {
     // create axes
   var yAxis = d3.axisLeft(yScale);
   var xAxis = d3.axisBottom(xScale);
+  // var xAxis = d3.axisBottom();
 
     // set x to the bottom of the chart
   chartGroup.append("g")
@@ -72,6 +73,7 @@ function makeResponsive() {
         .attr("height", d => chartHeight - yScale(d))
         .attr("fill", "green")
         // event listener for onclick event
+        // MENSAJES QUE APARECEN EN HTML AL CLICK
         .on("click", function(d, i) {
           alert(`Hey! You clicked bar ${dataCategories[i]}!`);
         })

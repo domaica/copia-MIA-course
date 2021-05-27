@@ -72,6 +72,6 @@ barsGroup.on("mouseover", function() {
     .on("mouseout", function() {
       d3.select(this)
             .transition()
-            .duration(500)
+            .duration(2000)
             .attr("fill", "green");
     });

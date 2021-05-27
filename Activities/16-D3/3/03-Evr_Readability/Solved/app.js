@@ -73,7 +73,9 @@ d3.csv("donuts.csv").then(function(donutData) {
 
   // CHANGE THE TEXT TO THE CORRECT COLOR
   chartGroup.append("g")
-    .attr("stroke", "green") // NEW!
+  //  // color varde o no de lis numeros eje y
+    // .attr("stroke", "green") // NEW!
+
     .call(leftAxis);
 
   // CHANGE THE TEXT TO THE CORRECT COLOR
@@ -117,7 +119,7 @@ d3.csv("donuts.csv").then(function(donutData) {
     // (https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/text-anchor)
     .attr("transform", `translate(${width / 2}, ${height + margin.top + 20})`)
     .attr("text-anchor", "middle")
-    .attr("font-size", "16px")
+    .attr("font-size", "20px")
     .attr("fill", "green")
     .text("Morning Donut Craving Level");
 

@@ -19,7 +19,7 @@ function unpack(rows, index) {
 }
 
 function getMonthlyData() {
-
+// creo que collapse monthly te da los datos mensualizados CUIDAOOOOO
   var queryUrl = `https://www.quandl.com/api/v3/datasets/WIKI/AMZN.json?start_date=2016-10-01&end_date=2017-10-01&collapse=monthly&api_key=${apiKey}`;
   d3.json(queryUrl).then(function(data) {
     var dates = unpack(data.dataset.data, 0);
@@ -98,6 +98,7 @@ function buildPlot() {
         autorange: true,
         type: "linear"
       },
+      // No mostrar legend
       showlegend: false
     };
 

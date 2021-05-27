@@ -5,7 +5,7 @@
 function randomNumbersBetween0and9(n) {
   var randomNumberArray = [];
   for (var i = 0; i < n; i++) {
-    var randomNumber = Math.floor(Math.random() * 10);
+    var randomNumber = Math.floor(Math.random() * 100);
     randomNumberArray.push(randomNumber);
   }
   return randomNumberArray;

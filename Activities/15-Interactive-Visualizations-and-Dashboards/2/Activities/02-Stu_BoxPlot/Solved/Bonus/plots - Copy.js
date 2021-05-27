@@ -1,7 +1,16 @@
 // Create the Traces
 var trace1 = {
   x: data.organ,
+
+  // Experiment
+  // x: data.organ.map(val => 'bronchus'),
+  
+  // Calcula la raiz cuadrada de los dias de supervivencia con el cancer
   y: data.survival.map(val => Math.sqrt(val)),
+  
+  // EXPERIMENT
+  // y: data.survival.map(val => val),
+  
   type: "box",
   name: "Cancer Survival",
   boxpoints: "all"

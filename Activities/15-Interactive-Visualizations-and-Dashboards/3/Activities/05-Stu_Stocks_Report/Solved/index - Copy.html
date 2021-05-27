@@ -10,7 +10,9 @@
   <script src="https://unpkg.com/simple-statistics@5.0.0/dist/simple-statistics.min.js"></script>
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <style>
+
+<!-- En vez de style.css se pone todo aqui  -->
+<style>
     body {
       background-color: unset;
     }
@@ -18,10 +20,17 @@
     border-collapse: collapse;
     width: 100%;
 } */
+.col-md-12 {
+    /* text-align: left;
+    padding: 8px; */
+    margin: 20px;
+}
+
 
 th, td {
     text-align: left;
     padding: 8px;
+    margin: 20px;
 }
 tbody>tr:nth-child(even){background-color: #f2f2f2 !important}
 tbody>tr:nth-child(odd){background-color: #fff !important}
@@ -29,7 +38,23 @@ tbody>tr:nth-child(odd){background-color: #fff !important}
   background-color: #2f3439;
   color: white;
 } */
-  </style>
+h1 {
+  margin: 20px;
+  color: navy;
+}
+h3 {
+  margin: 20px;
+  color: navy;
+}
+
+.company {
+  margin: 20px;
+  color: black;
+}
+
+</style>
+
+<!-- Empieza la pagina -->
 </head>
 
 <body>
@@ -45,30 +70,44 @@ tbody>tr:nth-child(odd){background-color: #fff !important}
     <div class="row">
       <div class="col-md-4">
         <div class="panel panel-primary">
+          <h3>
           <div class="panel-body">
             Company Profile
           </div>
+        </h3>
         </div>
         <div class="company">
-          Trading name Amazon Formerly called Cadabra, Inc. (1994–1995) Type Public Traded as NASDAQ: AMZN NASDAQ-100
-          component S&P 100 component S&P 500 component ISIN US0231351067 Industry Online shopping Founded
-          July 5, 1994; 23 years ago Founder Jeff Bezos Headquarters Seattle, Washington, U.S. Area served
-          Worldwide Key people Jeff Bezos (Chairman, President & CEO) Werner Vogels (CTO) Products Amazon
-          Appstore Amazon Echo Amazon Kindle Amazon Video Amazon Web Services ComiXology Revenue Increase
-          US$135.98 billion[1] (2016) Operating income Increase US$4.186 billion[1] (2016) Net income
-          Increase US$2.371 billion[1] (2016) Total assets Increase US$83.402 billion[1] (2016) Total
-          equity Increase US$19.285 billion[1] (2016) Number of employees Increase 341,400[2] (2017)
-          Divisions Worldwide Consumer Amazon Web Services (AWS)[3] Subsidiaries A9.com Alexa Internet
+          Trading name Amazon Formerly called Cadabra, Inc. (1994–1995) <br>
+          Type Public Traded as NASDAQ: AMZN NASDAQ-100
+          component S&P 100 component S&P 500 component ISIN US0231351067 <br>
+          Industry Online shopping <br>Founded July 5, 1994; 23 years ago <br>Founder Jeff Bezos <br>
+          Headquarters Seattle, Washington, U.S. Area served Worldwide <br> 
+          Key people Jeff Bezos (Chairman, President & CEO) Werner Vogels (CTO) <br>
+          Products Amazon
+          Appstore Amazon Echo Amazon Kindle Amazon Video Amazon Web Services ComiXology <br>
+          Revenue Increase
+          US$135.98 billion[1] (2016) <br>
+          Operating income Increase US$4.186 billion[1] (2016) <br>
+          Net income
+          Increase US$2.371 billion[1] (2016) <br>
+          Total assets Increase US$83.402 billion[1] (2016) <br>
+          Total
+          equity Increase US$19.285 billion[1] (2016) <br>
+          Number of employees Increase 341,400[2] (2017)<br>
+          Divisions <br>
+          Worldwide Consumer Amazon Web Services (AWS)[3] Subsidiaries A9.com Alexa Internet
           Amazon Books Amazon Game Studios Amazon Lab126 Amazon Studios Amazon Web Services Audible Inc.
           Book Depository Digital Photography Review Goodreads Internet Movie Database Junglee.com Souq.com
           Twitch.tv Whole Foods Market Woot Zappos Website amazon.com
         </div>
       </div>
-      <div class="col-md-8">
+      <div class="col-md-10">
         <div class="panel panel-default">
+          <h3>
           <div class="panel-body">
             Stock Performance
           </div>
+          </h3>
         </div>
         <div id="plot"></div>
       </div>

@@ -1,5 +1,5 @@
 // var apiKey = "YOUR KEY HERE";
-var apiKey = "  F";
+var apiKey = "yVAps94148M2ZiXfJyUF";
 /* global Plotly */
 var url =
   `https://www.quandl.com/api/v3/datasets/WIKI/AMZN.json?start_date=2016-10-01&end_date=2017-10-01&api_key=${apiKey}`;
@@ -62,7 +62,8 @@ function buildPlot() {
     };
 
     var trace1 = {
-      type: "scatter",
+      // type: "bar",
+      // mode: "lines+markers",
       mode: "lines",
       name: name,
       x: dates,
@@ -81,7 +82,10 @@ function buildPlot() {
         rangeslider: {}
       },
       yaxis: {
+        //Determina que el range sea zoomable
+        //https://plotly.com/python/reference/layout/xaxis/
         fixedrange: true
+        // rangemode: 'tozero'
       }
     };
 

@@ -27,6 +27,6 @@ numArray3.sort((firstNum, secondNum) => firstNum - secondNum);
 console.log(numArray3);
 
 // Reverse the array
-var numArray4 = [1, 2, 3];
+var numArray4 = [5, 2, 4];
 var reversedArray = numArray4.reverse()
 console.log(reversedArray);

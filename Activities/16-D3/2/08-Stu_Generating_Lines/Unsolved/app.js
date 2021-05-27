@@ -18,6 +18,17 @@ d3.csv("NCHS_life_expectancy_at_birth.csv").then(function(lifeData) {
     data.lifeExpectancy = +data.lifeExpectancy;
   });
 
+var xData = data.year
+var yData = data.lifeExpectancy
+// console.log("xData:", xData);
+// console.log("yData:", yData);
+
+var coordinates = [];
+
+var lineGenerator = d3.line();
+
+console.log("Drawing commands:", lineGenerator(coordinates));
+
   // Create a scale for your independent (x) coordinates
 
 

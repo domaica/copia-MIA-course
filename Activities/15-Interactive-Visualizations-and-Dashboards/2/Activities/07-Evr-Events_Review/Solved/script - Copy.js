@@ -1,4 +1,6 @@
 // Use D3 to create an event handler
+// EXPERIMENT
+// d3.selectAll("body").on("click", updatePage);
 d3.selectAll("body").on("change", updatePage);
 
 function updatePage() {

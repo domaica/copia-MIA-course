@@ -9,7 +9,7 @@ console.log(slicedData);
 //EXPERIMENT
 var intento = slicedData.reverse();
 var intento10 = intento.slice(0, 10);
-console.log(intento10);
+console.log('Test reverse:',intento10);
 
 // Reverse the array to accommodate Plotly's defaults
 var reversedData = slicedData.reverse();

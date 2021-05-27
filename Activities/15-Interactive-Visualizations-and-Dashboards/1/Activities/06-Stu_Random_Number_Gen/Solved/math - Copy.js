@@ -8,7 +8,7 @@ for (var i = 0; i < 5; i++) {
  //Add the numbers to the array
  // random entre 0 y 1 multiplicado por  59 round abajo y le sumo 1 
  // por el index 0 de inicio
- powerBallNumbers.push(Math.floor(((Math.random() * 95) + 1)));
+ powerBallNumbers.push(Math.floor(((Math.random() * 59) + 1)));
 }
 //  Check your numbers.
 console.log(powerBallNumbers);

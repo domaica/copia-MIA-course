@@ -35,7 +35,13 @@ console.log("Math.floor(Math.random() * 10)", Math.floor(Math.random() * 10) + 1
 var arr = [10, 100, 1000];
 
 for (var i = 0; i < arr.length; i++) {
-  console.log(Math.floor(Math.random() * arr[i]));
+  //Experiment
+  var num = Math.random()
+  console.log('numero :', num);
+  console.log(Math.floor(num * arr[i]));
+  console.log(Math.round(num * arr[i]));
+// raw
+  // console.log(Math.floor(Math.random() * arr[i]));
 }
 
 // Or

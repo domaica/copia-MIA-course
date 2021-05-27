@@ -14,7 +14,7 @@ console.log(y1);
 // Create a trace object with the data in `y0`
 var trace1 = {
   y: y0,
-  boxpoints: "all",
+  // boxpoints: "all",
   type: "box"
 };
 
