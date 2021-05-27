@@ -14,7 +14,9 @@ And 1 additional folder:
 
 ### - Subfolder 'static' contains:
 
-- 'static/data' subfolder which contains a 'data.csv' (data) file with the sample statistical infos collected for the project that will be used to analyze and plot visualizations.
+- 'static/data' subfolder which contains 2 files:
+        - 'data.csv' (data) file with the sample statistical infos collected for the project that will be used to analyze and plot visualizations.
+        - 'data_correlations.xlsx' (data) file with calculations of different correlation scenarios. It is stored in .xlsx format in spite of be based on data.csv because comma separated value files are not able to store formulas. To calculate correlations "CORREL" excel formula has been used for this exercise.
     
 - 'static/js' subfolder with and 'app.js' (coding) file invoked from html containing the javascript code.
   

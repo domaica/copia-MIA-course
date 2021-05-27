@@ -111,7 +111,7 @@ function generate_graph (csvData) {
     
        // initial default selections
        var selected_x = "poverty";
-       var selected_y = "obesity";
+       var selected_y = "healthcare";
     
        // Tool Tip info box (state, X stats,  Y stats)
        var toolTip = d3.tip()
