@@ -23,16 +23,17 @@
   cursor: pointer;
 }
 
-/* font size dependent on radius, see app.js */
+
+/* Labels de circulos state */
 .stateText {
   font-family: sans-serif;
-  fill: #fff;
+  fill: yellow;
   text-anchor: middle;
 }
 
 .stateCircle {
-  fill: #89bdd3;
-  stroke: #e3e3e3;
+  fill: navy;
+  /* stroke: #e3e3e3; */
 }
 
 .chart {
@@ -42,13 +43,13 @@
 
 .d3-tip {
   padding: 6px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1;
   line-height: 1.5em;
-  color: #fff;
+  color: black;
   text-align: center;
   text-transform: capitalize;
-  background: rgba(0, 0, 0, 0.8);
+  background: yellow;
   border-radius: 4px;
 }
 
