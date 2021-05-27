@@ -36,27 +36,16 @@ body {
 
 .h2 {
   margin-left: 50px;
-  /* font-size: 22px; */
-  /* padding-bottom: 20px; */
-  /* color: red; */
  }
 
 #article {
-  /* margin-left: 50px; */
   margin: 60px;
-  /* font-size: 22px; */ */
-  /* padding-bottom: 20px;
-  color: rgb(255, 252, 219); */
 }
 
 
 #scatter {
   margin: 10px;
   padding-left: 50px;
-  /* font Size circles */
-  font-size: 22px;
-  /* padding-bottom: 20px;
-  color: rgb(255, 252, 219); */
 }
 
 
