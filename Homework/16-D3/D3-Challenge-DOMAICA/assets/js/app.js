@@ -31,7 +31,7 @@ text_xaxis.attr("transform",`translate(
     );
 
 // x-axis (bottom) ######################################
-// Build text_xaxis details (css class)
+// Build text_xaxis details
 text_xaxis.append("text")
     // text position
     .attr("y", -25)
@@ -56,7 +56,7 @@ text_xaxis.append("text")
     .text("Household Income (Median)");
 
 // y-axis (left) ######################################
-// Second g tag for text_yaxis (css class)
+//  g tag for text_yaxis
 svg.append("g").attr("class", "text_yaxis");
 var text_yaxis = d3.select(".text_yaxis");
 // Transform to adjust for text_yaxis
@@ -71,8 +71,7 @@ text_yaxis.attr("transform",`translate(
     )rotate(-90)`
     );
 
-// y-axis (left) ______________________________
-// Build text_yaxis details (css class)
+// Build text_yaxis details
 text_yaxis .append("text")
     .attr("y", -22)
     .attr("data-name", "obesity")
@@ -94,7 +93,7 @@ text_yaxis .append("text")
     .attr("class", "aText inactive y")
     .text("Lacks Healthcare (%)");
     
-// Plot data ########################################
+// Plot after reading csv file with data ########################################
 
 d3.csv("assets/data/data.csv").then(function(data) {
     generate_graph(data);
@@ -124,7 +123,7 @@ function generate_graph (csvData) {
             // Capitalize state name in toolbox
             const statetext = d.state;
             const upper = statetext.toUpperCase();
-            // State text in bold 
+            // State text in bold and capital letters
             var stateLine = `<div><strong>${upper}</strong></div>`;
             var yLine = `<div>${selected_y}: ${d[selected_y]}%</div>`;
             if (selected_x === "poverty") {
@@ -207,9 +206,9 @@ function generate_graph (csvData) {
         );
 
     // Append the circles for each row
-    var allCircles = svg.selectAll("g allCircles").data(csvData).enter();
+    var circles = svg.selectAll("g circles").data(csvData).enter();
 
-    allCircles.append("circle")
+    circles.append("circle")
         .attr("cx", function(d) {
             return xScale(d[selected_x]);
         })
@@ -223,9 +222,8 @@ function generate_graph (csvData) {
         })
 
         // Apply state text on circles
-        allCircles
+        circles
             .append("text")
-            // .attr("font-size", cRadius)
             .attr("font-size", 11)
             .attr("class", "stateText")
 
@@ -247,7 +245,7 @@ function generate_graph (csvData) {
                 // Highlight circle border in white
                 d3.select("." + d.abbr).style("stroke", "white");
             })
-
+           // when leaving mouse from circle/tooltip
             .on("mouseout", function(d) {
                  // hide tooltip
                 toolTip.hide(d);
