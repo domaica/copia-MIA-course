@@ -17,6 +17,7 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 // City markers
 
 // Add code to create a marker for each city below and add it to the map
+// SOLUCION PROFESOR VER PPT
 
 // newyork;
 // chicago;

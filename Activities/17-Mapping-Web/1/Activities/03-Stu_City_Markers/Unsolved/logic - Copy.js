@@ -25,9 +25,9 @@ var marker = L.marker([40.71, -74.00], {
 }).addTo(myMap);
 
 // chicago;
-var marker = L.marker([45.52, -87.62], {
+var marker = L.marker([41.87, -87.62], {
   draggable: true,
-  title: "New York"
+  title: "Chicago"
 }).addTo(myMap);
 // houston;
 var marker = L.marker([29.76, -95.36], {

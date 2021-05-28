@@ -34,6 +34,9 @@ L.polygon([
   fillColor: "yellow",
   fillOpacity: 0.75
 }).addTo(myMap);
+L.marker([45.54, -122.68]).addTo(myMap);
+L.marker([45.55, -122.68]).addTo(myMap);
+L.marker([45.55, -122.66]).addTo(myMap);
 
 // Coordinates for each point to be used in the polyline
 var line = [
@@ -57,3 +60,6 @@ L.rectangle([
   weight: 3,
   stroke: true
 }).addTo(myMap);
+
+L.marker([45.55, -122.64]).addTo(myMap);
+L.marker([45.54, -122.61]).addTo(myMap);

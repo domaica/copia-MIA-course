@@ -8,21 +8,26 @@ Inside that root folder, we can find 3 files:
 - 'README.md' -> Markdown with project explanation.
 - 'README.pptx' -> Powerpoint containing screenshots, explaining process and main images of the outcomes, of webpages and additional details.
 
-And 1 additional folder:
+And 2 additional folders:
 
-- 'static'
+- 'assets'
+- 'images'
 
-### - Subfolder 'static' contains:
+### - Subfolder 'assets' contains:
 
-- 'static/data' subfolder which contains 2 files:
+- 'assets/data' subfolder which contains 2 files:
 
     - 'data.csv' (data) file with the sample statistical infos collected for the project that will be used to analyze and plot visualizations.
 
     - 'data_correlations.xlsx' (data) file with calculations of different correlation scenarios. It is stored in .xlsx format in spite of being based on data.csv because comma separated value files are not able to store formulas. To calculate correlations "CORREL" excel formula has been used for this exercise.
     
-- 'static/js' subfolder with and 'app.js' (coding) file invoked from html containing the javascript code.
+- 'assets/js' subfolder with and 'app.js' (coding) file invoked from html containing the javascript code.
   
-- 'static/css' subfolder which contains 2 files:  'd3Style.css'  and 'style.css'. Both files are .css Cascading Style Sheets used to adapt the presentation of webpage by modifying and enhancing colors, layouts, margin, fonts, etc.
+- 'assets/css' subfolder which contains 2 files:  'd3Style.css'  and 'style.css'. Both files are .css Cascading Style Sheets used to adapt the presentation of webpage by modifying and enhancing colors, layouts, margin, fonts, etc.
+
+### - Subfolder 'assets' contains:
+
+It contains some output images and gif.
 
 
 ### - Cross-origin resource sharing (CORS)

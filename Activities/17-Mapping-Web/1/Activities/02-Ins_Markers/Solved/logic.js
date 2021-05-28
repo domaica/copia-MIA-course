@@ -1,7 +1,7 @@
 // Create our initial map object
 // Set the longitude, latitude, and the starting zoom level
 var myMap = L.map("map", {
-  center: [45.52, -122.67],
+  center: [40.41, -3.70],
   zoom: 13
 });
 
@@ -13,12 +13,12 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
   maxZoom: 18,
   zoomOffset: -1,
   id: "mapbox/streets-v11",
-  accessToken: API_KEY
+  accessToken: "pk.eyJ1IjoiaWRvbWFpY2EiLCJhIjoiY2twMzJmaDh6MDFxbjJ2cXQyb2QyMzhwaiJ9.-FzfqNuduzuROgy0Sa423g"
 }).addTo(myMap);
 
 // Create a new marker
 // Pass in some initial options, and then add it to the map using the addTo method
-var marker = L.marker([45.52, -122.67], {
+var marker = L.marker([40.41, -3.70], {
   draggable: true,
   title: "My First Marker"
 }).addTo(myMap);

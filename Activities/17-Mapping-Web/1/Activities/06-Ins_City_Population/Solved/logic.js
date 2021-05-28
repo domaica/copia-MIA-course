@@ -10,7 +10,7 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
   maxZoom: 18,
   zoomOffset: -1,
   id: "mapbox/streets-v11",
-  accessToken: API_KEY
+  accessToken: "pk.eyJ1IjoiaWRvbWFpY2EiLCJhIjoiY2twMzJmaDh6MDFxbjJ2cXQyb2QyMzhwaiJ9.-FzfqNuduzuROgy0Sa423g"
 }).addTo(myMap);
 
 // Define a markerSize function that will give each city a different radius based on its population
@@ -41,6 +41,7 @@ var cities = [
     population: 3971883
   },
   {
+    // Casi no se ve por poblacion pequeña 
     name: "Omaha",
     location: [41.2524, -95.9980],
     population: 446599

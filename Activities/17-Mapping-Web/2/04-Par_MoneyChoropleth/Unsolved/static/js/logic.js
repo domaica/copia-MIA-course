@@ -23,6 +23,9 @@ var geojson;
 
 // Grab data with d3
 
+d3.json(url).then(function(response) {
+  console.log(response);
+
   // Create a new choropleth layer
 
     // Define what  property in the features to use
@@ -40,3 +43,9 @@ var geojson;
     // Add min & max
 
   // Adding legend to the map
+
+
+
+
+
+});

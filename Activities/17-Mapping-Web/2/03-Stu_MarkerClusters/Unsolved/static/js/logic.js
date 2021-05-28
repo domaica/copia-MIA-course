@@ -14,26 +14,36 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
   accessToken: API_KEY
 }).addTo(myMap);
 
-// TODO:
-
 // Store API query variables
 var baseURL = "https://data.cityofnewyork.us/resource/fhrw-4uyv.json?";
-// Add the dates in the ISO formats
-var date = "$where=created_date between '' and ''";
-// Add the complaint type
-var complaint = "&complaint_type=";
-// Add a limit
-var limit = "&$limit=";
-
-
+var date = "$where=created_date between'2016-01-01T00:00:00' and '2017-01-01T00:00:00'";
+var complaint = "&complaint_type=Rodent";
+var limit = "&$limit=10000";
 // Assemble API query URL
+var url = baseURL + date + complaint + limit;
 
 // Grab the data with d3
+d3.json(url).then(function(response) {
+  console.log(response);
 
   // Create a new marker cluster group
+  var heatArray = [];
 
   // Loop through data
+  for (var i = 0; i < response.length; i++) {
+    var location = response[i].location;
 
+    if (location) {
+      heatArray.push([location.coordinates[1], location.coordinates[0]]);
+    }
+  }
+
+  var heat = L.heatLayer(heatArray, {
+    radius: 20,
+    blur: 35
+  }).addTo(myMap);
+
+});
     // Set the data location property to a variable
 
     // Check for location property
