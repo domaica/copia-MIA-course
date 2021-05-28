@@ -25,7 +25,7 @@ And 2 additional folders:
   
 - 'assets/css' subfolder which contains 2 files:  'd3Style.css'  and 'style.css'. Both files are .css Cascading Style Sheets used to adapt the presentation of webpage by modifying and enhancing colors, layouts, margin, fonts, etc.
 
-### - Subfolder 'assets' contains:
+### - Subfolder 'images' contains:
 
 It contains some output images and gif.
 
