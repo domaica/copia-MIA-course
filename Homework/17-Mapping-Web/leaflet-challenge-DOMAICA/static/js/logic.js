@@ -1,69 +1,75 @@
-// Selectable backgrounds of our map - tile layers:
-// grayscale background.
-var graymap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?" +
-  "access_token=pk.eyJ1IjoiaWRvbWFpY2EiLCJhIjoiY2twMzJmaDh6MDFxbjJ2cXQyb2QyMzhwaiJ9.-FzfqNuduzuROgy0Sa423g");
+// MAPS needed for our diverse backgrounds - tile layers:
 
-// satellite background.
-var satellitemap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v9/tiles/256/{z}/{x}/{y}?" +
-  "access_token=pk.eyJ1IjoiaWRvbWFpY2EiLCJhIjoiY2twMzJmaDh6MDFxbjJ2cXQyb2QyMzhwaiJ9.-FzfqNuduzuROgy0Sa423g");
+// OUTDOORS TYPE MAP
+var outdoors = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/outdoors-v9/tiles/256/{z}/{x}/{y}?access_token={accessToken}",{
+  accessToken: API_KEY
+});
 
-// outdoors background.
-var outdoors = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/outdoors-v9/tiles/256/{z}/{x}/{y}?" +
-  "access_token=pk.eyJ1IjoiaWRvbWFpY2EiLCJhIjoiY2twMzJmaDh6MDFxbjJ2cXQyb2QyMzhwaiJ9.-FzfqNuduzuROgy0Sa423g");
+// GRAYMAP TYPE
+var graymap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?access_token={accessToken}",{
+  accessToken: API_KEY
+});
 
-// map object to an array of layers we created.
+//  SATELLITE TYPE MAP
+var satellitemap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v9/tiles/256/{z}/{x}/{y}?access_token={accessToken}",{
+  accessToken: API_KEY
+});
+
+
+
+// Define a map object with center, zoom and layers
 var map = L.map("mapid", {
   // USA center location
   center: [37.09, -95.71],
   zoom: 4,
-  layers: [graymap, satellitemap, outdoors]
+  layers: [outdoors, graymap, satellitemap]
 });
 
-// adding one 'graymap' tile layer to the map.
-graymap.addTo(map);
 
-// layers for two different sets of data, earthquakes and tectonicplates.
+// Define variables needed for layers of tectonicplates and earthquakes.
 var tectonicplates = new L.LayerGroup();
 var earthquakes = new L.LayerGroup();
 
-// base layers
+// Layers containing different map options
 var baseMaps = {
   "Satellite map": satellitemap,
   "Grayscale map": graymap,
   "Normal physical map": outdoors
 };
 
-// overlays 
+// overlays for data of earthquakes & tectonicplates
 var overlayMaps = {
   "Tectonic Plates": tectonicplates,
   "Earthquakes": earthquakes
 };
 
-// control which layers are visible.
+// Adding control layers to map.
 L.control
   .layers(baseMaps, overlayMaps, {collapsed: true})
   .addTo(map);
 
-// retrieve earthquake geoJSON data.
-// d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson", function(data) {
+// Extract earthquake geoJSON data.
+// decided to retrieve all earthquake data for last week among different options
   d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson", function(data) {
-    console.log(data.features);
+    // console.log(data.features);
 
+  // function to give outlook for markers
   function styleInfo(feature) {
     return {
-      // opacity: 1,
       fillOpacity: 0.8,
+      // Color will be determined by "depth" or 3rd data in coordinates so #2 index as requested
       fillColor: getColor(feature.geometry.coordinates[2]),
-      // border
+      // border of markers/bubbles
       color: "black",
+      // Radius will be determined by richter scale magnitude of earthquake
       radius: getRadius(feature.properties.mag),
       stroke: true,
       weight: 0.5
     };
   }
 
-  // Define the color of the marker based on the magnitude of the earthquake.
-
+  // Color of the marker depending on magnitude of the earthquake.
+  // Depth measured in kilometers according to GeoJSON documentation
   function getColor(depth) {
     switch (true) {
       case depth > 500:
@@ -74,23 +80,18 @@ L.control
         return "#942FDC";
       case depth > 20:
         return "#D31BA4";
-        // return "#EDE1F6";
       case depth > 10:
         return "#D64DB3";
-        // return "#EDE1F6";
+      // just a heads up. Depth can be negative if earthquake happens 
+      // in an elevation above sea level (mountain, vulcano, etc)
       default:
         return "#F99BE1";
-        // return "#EDE1F6";
     }
   }
 
-  // define the radius of the earthquake marker based on its magnitude.
-
+  // Establish final radius of the earthquake marker 
+  // based on its magnitude adjusted or weighted to have better visibility
   function getRadius(magnitude) {
-    // if (magnitude === 0) {
-    //   return 1;
-    // }
-
     return magnitude * 3;
   }
 
@@ -101,9 +102,10 @@ L.control
     },
     style: styleInfo,
     onEachFeature: function(feature, layer) {
+      // Popup text
       layer.bindPopup("<strong>Magnitude (Richter): </strong>" + feature.properties.mag 
       + "<br><strong>Location: </strong>" + feature.properties.place 
-      // obtained 3rd coordinate
+      // obtained 3rd coordinate or depth in addition to lat lng
       + "<br><strong>Depth (km): </strong>" + feature.geometry.coordinates[2]);
     }
 
@@ -111,47 +113,46 @@ L.control
 
   earthquakes.addTo(map);
 
-
+  // Position of legend in the map
   var legend = L.control({
     position: "bottomleft"
   });
 
 
-// 
+// Adding legend colors, title, etc
 legend.onAdd = function() {
   var div = L.DomUtil.create("div", "info legend");
-  labels = ['<strong>Depth in Km.</strong>'];
+  //title of labels box, bold and give one additional row space
+  labels = ['<strong>Depth in Km.</strong><br>'];
 
-  var grades = ['Elevation (depth < 0) ', 10, 20, 100, 250, 500];
+  var depths = ['Elevation (depth < 0) ', 10, 20, 100, 250, 500];
   var colors = [
     "#F99BE1",
     "#D64DB3",
     "#D31BA4",
-    // "#EDE1F6",
-    // "#D9B9F2",
-    // "#C092E5",
     "#942FDC",
     "#720DBA",
     "#42117D"
   ];
+  // Send label to box title
   labels.push('<title></title>');
   div.innerHTML = labels.join('<br>');
 
-  for (var i = 0; i < grades.length; i++) {
+ // Loop and to build legend, add classes and div to send to html and map
+  for (var i = 0; i < depths.length; i++) {
     div.innerHTML += "<i style='background: " + colors[i] + "'></i> " +
-      grades[i] + (grades[i + 1] ? "&ndash;" + grades[i + 1] + "<br>" : "+");
+      depths[i] + (depths[i + 1] ? " to " + depths[i + 1] + " km.<br>" : "+ km.");
   }
   return div;
 };
-
-
 legend.addTo(map);
 
-  // retrive Tectonic Plate geoJSON data.
+  // Extract data of Tectonic Plates from geoJSON.
+  // Simple, free access GeoJSON without API KEY
   d3.json("https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json",
     function(platedata) {
-      console.log(platedata.features);
-
+      // console.log(platedata.features);
+      // Add tectonic plates lines to map
       L.geoJson(platedata, {
         color: "brown",
         dashArray: '4, 4', dashOffset: '0',
@@ -159,7 +160,6 @@ legend.addTo(map);
         weight: 3
       })
       .addTo(tectonicplates);
-
       // add the tectonicplates layer to the map.
       tectonicplates.addTo(map);
     });

@@ -7,32 +7,23 @@ body,
   margin: 0;
 }
 
+/* Sizes and format for legend  */
 .legend {
-  padding: 10px;
+  padding:5px;
   line-height: 18px;
-  color: #555;
-  background-color: #fff;
+  color: black;
+  background-color: white;
   border-radius: 5px;
 }
-
+/* Sizes and format for legend color grades */
 .legend i {
   float: left;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   margin-right: 8px;
-  opacity: 0.7;
+  opacity: 0.81;
 }
 
-.leaflet-bottom.leaflet-left {
-  width: 90%;
-}
-
-.leaflet-control-container .leaflet-timeline-controls {
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0;
-  margin-bottom: 15px;
-}
 /* needed to correct colors not aligned in 1 column in legend  */
 .info.legend.leaflet-control br {
   clear: both;
