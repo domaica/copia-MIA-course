@@ -34,6 +34,8 @@ L.polygon([
   fillColor: "yellow",
   fillOpacity: 0.75
 }).addTo(myMap);
+
+//EXPERIMENT
 L.marker([45.54, -122.68]).addTo(myMap);
 L.marker([45.55, -122.68]).addTo(myMap);
 L.marker([45.55, -122.66]).addTo(myMap);
@@ -61,5 +63,6 @@ L.rectangle([
   stroke: true
 }).addTo(myMap);
 
+//EXPERIMENT
 L.marker([45.55, -122.64]).addTo(myMap);
 L.marker([45.54, -122.61]).addTo(myMap);

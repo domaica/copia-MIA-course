@@ -5,13 +5,13 @@ var myMap = L.map("map", {
 });
 
 // Adding tile layer
-L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={pk.eyJ1IjoiaWRvbWFpY2EiLCJhIjoiY2twMzJmaDh6MDFxbjJ2cXQyb2QyMzhwaiJ9.-FzfqNuduzuROgy0Sa423g}", {
   attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
   tileSize: 512,
   maxZoom: 18,
   zoomOffset: -1,
   id: "mapbox/streets-v11",
-  accessToken: API_KEY
+  accessToken: "pk.eyJ1IjoiaWRvbWFpY2EiLCJhIjoiY2twMzJmaDh6MDFxbjJ2cXQyb2QyMzhwaiJ9.-FzfqNuduzuROgy0Sa423g"
 }).addTo(myMap);
 
 // Use this link to get the geojson data.

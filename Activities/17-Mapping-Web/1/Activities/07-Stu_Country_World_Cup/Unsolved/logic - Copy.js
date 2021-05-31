@@ -89,7 +89,7 @@ for (var i = 0; i < countries.length; i++) {
   L.circle(countries[i].location, {
     fillOpacity: 0.75,
 
-    color: "white",
+    color: "black",
     fillColor: color,
     // Setting our circle's radius equal to the output of our markerSize function
     // This will make our marker's size proportionate to its population
