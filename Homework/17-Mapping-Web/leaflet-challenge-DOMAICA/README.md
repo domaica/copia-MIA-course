@@ -1,6 +1,21 @@
-# D3-Challenge-DOMAICA
+# leaflet-challenge-DOMAICA
 
-## Main folder for solution is called: 'D3-Challenge-DOMAICA'
+The requirements of this project asked for visualization of earthquakes using the APIs provided by USGS (United States Geological Survey). The data is updated regularly and is saved in GeoJSON format. They are freely accessible and available and do not require API keys.
+There are different data that can be accessed. I have asked for all earthquakes of any magnitude that have occurred in the last 7 days.
+
+It was also required to access another dataset containing all locations in order to draw the tectonic plates in another layer. As we know, earthquakes happen due to the friction of plates in the earth's crust and therefore most and the strongest earthquakes occur at its edges.
+
+## Main technologies used to deploy this project
+- 'Javascript' programming language.
+- 'leaflet.js' JavaScript library for interactive maps.
+
+- 'HTML' standard markup language for creating Web pages
+- 'CSS' (Cascading Style Sheets) specifies style—page layouts, colors and fonts.
+
+- 'GeoJSON' open standard geospatial data interchange format that represents simple geographic features and their attributes. Based on JavaScript Object Notation (JSON)
+
+
+## Main folder for solution is called: 'leaflet-challenge-DOMAICA'
 
 Inside that root folder, we can find 3 files:
 
@@ -10,24 +25,20 @@ Inside that root folder, we can find 3 files:
 
 And 2 additional folders:
 
-- 'assets'
+- 'static'
 - 'images'
 
 ### - Subfolder 'assets' contains:
-
-- 'assets/data' subfolder which contains 2 files:
-
-    - 'data.csv' (data) file with the sample statistical infos collected for the project that will be used to analyze and plot visualizations.
-
-    - 'data_correlations.xlsx' (data) file with calculations of different correlation scenarios. It is stored in .xlsx format in spite of being based on data.csv because comma separated value files are not able to store formulas. To calculate correlations "CORREL" excel formula has been used for this exercise.
-    
-- 'assets/js' subfolder with and 'app.js' (coding) file invoked from html containing the javascript code.
+   
+- 'static/js' subfolder with 2 files:
+    'app.js' (coding) file invoked from html containing the javascript code.
+    'config.js' with API-KEY required to access mapbox, provider of online maps for websites.
   
-- 'assets/css' subfolder which contains 2 files:  'd3Style.css'  and 'style.css'. Both files are .css Cascading Style Sheets used to adapt the presentation of webpage by modifying and enhancing colors, layouts, margin, fonts, etc.
+- 'static/css' subfolder which contains a filled named 'style.css'. It is a .css Cascading Style Sheets used to adapt the presentation of webpage by modifying and enhancing colors, layouts, margin, fonts, etc.
 
 ### - Subfolder 'images' contains:
 
-It contains some output images and gif.
+It contains some introduction images for the project.
 
 
 ### - Cross-origin resource sharing (CORS)
