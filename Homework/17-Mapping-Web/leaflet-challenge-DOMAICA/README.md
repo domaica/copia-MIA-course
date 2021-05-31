@@ -1,9 +1,9 @@
 # leaflet-challenge-DOMAICA
 
 The requirements of this project asked for visualization of earthquakes using the APIs provided by USGS (United States Geological Survey). The data is updated regularly and is saved in GeoJSON format. They are freely accessible and available and do not require API keys.
-There are different data that can be accessed. I have asked for all earthquakes of any magnitude that have occurred in the last 7 days.
+There are different data that can be accessed. I have picked a dataset containing all earthquakes of any magnitude that have occurred in the last 7 days.
 
-It was also required to access another dataset containing all locations in order to draw the tectonic plates in another layer. As we know, earthquakes happen due to the friction of plates in the earth's crust and therefore most and the strongest earthquakes occur at its edges.
+It was also required to access another dataset containing all locations in order to draw the tectonic plates in another layer. As we know, earthquakes happen due to the friction of plates in the earth's crust and therefore most and the strongest earthquakes occur at its edges. Data on tectonic plates can be found at <https://github.com/fraxen/tectonicplates>.
 
 ## Main technologies used to deploy this project
 - 'Javascript' programming language.
@@ -52,6 +52,6 @@ After running that command, you can access your webpage by browsing in 'localhos
 
 ### - Webpage published in following link:
 
-https://domaica.github.io/homework16/
+https://domaica.github.io/homework17/
 
-            https://domaica.github.io/homework16/
+
