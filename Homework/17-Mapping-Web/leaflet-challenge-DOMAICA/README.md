@@ -28,7 +28,7 @@ And 2 additional folders:
 - 'static'
 - 'images'
 
-### - Subfolder 'assets' contains:
+### - Subfolder 'static' contains:
    
 - 'static/js' subfolder with 2 files:
     'app.js' (coding) file invoked from html containing the javascript code.
