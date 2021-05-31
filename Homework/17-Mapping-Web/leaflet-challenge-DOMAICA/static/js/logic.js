@@ -123,7 +123,7 @@ L.control
 legend.onAdd = function() {
   var div = L.DomUtil.create("div", "info legend");
   //title of labels box, bold and give one additional row space
-  labels = ['<strong>Depth in Km.</strong><br>'];
+  labels = ['<strong>EARTHQUAKE DEPTH in KM.</strong><br>'];
 
   var depths = ['Elevation (depth < 0) ', 10, 20, 100, 250, 500];
   var colors = [
