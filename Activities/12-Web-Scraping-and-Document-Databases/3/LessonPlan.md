@@ -246,7 +246,7 @@ def index():
 
   * In particular, emphasize the double brackets, `{{...}}`.
 
-* For code such as a loop, we use `{% this will not be displayed %}`
+<!-- * For code such as a loop, we use `{% this will not be displayed %}` -->
 
   * In particular, emphasize the "percent brackets", `{%...%}`.
 
