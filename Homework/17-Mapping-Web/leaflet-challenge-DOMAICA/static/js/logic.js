@@ -45,7 +45,7 @@ var overlayMaps = {
 
 // Adding control layers to map.
 L.control
-  .layers(baseMaps, overlayMaps, {collapsed: true})
+  .layers(baseMaps, overlayMaps, {collapsed: false})
   .addTo(map);
 
 // Extract earthquake geoJSON data.
